@@ -1,0 +1,39 @@
+name: 'model'
+desc: 'just an example'
+data:
+  id: 'kaggle'
+  property: 'fecreal'
+
+krr:
+  centering: false
+  kernelf: ['gaussian', 1505.02]
+  nl: 1.79e-7
+
+mbtrs:
+  mbtr_1:
+    acc: 0.001
+    aindexf: 'full'
+    corrf: 'identity'
+    d: [-2.40, 1.76, 30]  # taken directly from dataset
+    distrf: ['normal', 1448.1546878700494]  # found with autotune
+    eindexf: 'full'
+    elems: null
+    flatten: true
+    geomf: 'count'
+    k: 1
+    norm: 23.237676767676767  # found with autotune
+    weightf: 'identity'
+
+  mbtr_2:
+    acc: 0.001
+    aindexf: 'noreversals'
+    corrf: 'identity'
+    d: [-0.04, 0.008, 100]  # taken from dataset
+    distrf: ['normal', 0.0078125]  # found with autotune
+    eindexf: 'noreversals'
+    elems: null
+    flatten: true
+    geomf: '1/distance'
+    k: 2
+    norm: null
+    weightf: 'identity^2'
