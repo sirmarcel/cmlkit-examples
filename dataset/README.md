@@ -1,0 +1,3 @@
+This is just a quick script demonstrating how to convert a dataset from another source to the `cmlkit` format. Note that this requires `ase` to parse the `aims` geometry format. But `ase` is great, and easy to install via `conda`.
+
+Also note how we *save* a split of the dataset (the kaggle training data) as subsets -- this is for use when doing hyperparameter tuning: We'd optimise the parameters on the larger part of that split, and retain a validation set to evaluate the model resulting from that optimisation. The *final* testing should then be done on an entirely held out testing dataset, which exists in this case: The testing portion of the kaggle challenge, which is not even imported here.
